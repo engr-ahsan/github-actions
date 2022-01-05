@@ -1,0 +1,24 @@
+name: string
+age: 22
+address: "address: address"
+active: true
+key:
+  value1: ans
+  value2: ans2
+  value3:
+    value31: ahsan
+jsonObject: {key: value, key2: value2, key3: value3} # Not used mostly
+array:
+  - item1
+  - item2
+  - item3
+  - key2: value
+  - key3: value2
+    key4: value3
+longText: >  # use this character when you DONOT WANT to preserve the newline "\n" in the string 
+        the little quick brown fox
+        jumps over the lazy dog.
+
+longTextWithNewLine: | # use this character when you  WANT to preserve the newline "\n" in the string
+        the little quick brown fox
+        jumps over the lazy dog.
