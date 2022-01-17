@@ -1,3 +1,7 @@
+# Notes
+# a step cannot have both the `uses` and `run` keys
+
+
 name: Actions Workflow
 
 on: [push]
@@ -13,6 +17,10 @@ jobs:
         run: |
           pwd
           ls -a
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKSPACE
+          echo "{{github.token}}"
 
       - name: Simple JS Action
         id: greet # To reference the step in the steps variable.   
