@@ -11,3 +11,5 @@ Body: {
 }
 
 Also need a personal access token. And use it for Authentication
+
+**A secret key maximum size is 64KB** 
