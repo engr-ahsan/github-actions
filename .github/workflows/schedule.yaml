@@ -5,7 +5,9 @@
 name: Actions Workflow
 
 on: 
-  push:
+  schedule:     # Schedule this job to run on specified cron 
+    - cron: "0/5 * * * *"
+    - cron: "0/6 * * * *"
   pull_request:
     types: [closed, assigned, reopened, opened]   ## Specify the types of pull requests to run this job
 

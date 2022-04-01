@@ -6,8 +6,16 @@ name: Actions Workflow
 
 on: 
   push:
-  pull_request:
-    types: [closed, assigned, reopened, opened]   ## Specify the types of pull requests to run this job
+    branches:
+      - master
+      - 'feature/*' # matches feature/featA, feature/featB etc. Will not match feature/featA/test
+      - 'feature/**' # matches all links
+      - '!feature/feat' # ignore this pattern
+    tags:
+      - v
+    paths:
+      - '**.js' ## Only run when JS files are pushed
+
 
 jobs:
   run-github-actions:

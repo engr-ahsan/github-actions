@@ -5,9 +5,8 @@
 name: Actions Workflow
 
 on: 
-  push:
-  pull_request:
-    types: [closed, assigned, reopened, opened]   ## Specify the types of pull requests to run this job
+  repository_dispatch:      # Manually Triggered through URL
+    types: [build]  
 
 jobs:
   run-github-actions:

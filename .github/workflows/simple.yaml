@@ -1,11 +1,12 @@
 name: Shell Commands
-
+# the event to trigger the job. can be multiple or single like pull_request, push, issue
 on: [push]
 
+# The list of jobs to run
 jobs:
-  run-shell-command:
-    runs-on: ubuntu-18.04
-    steps:
+  run-shell-command: # Job name
+    runs-on: ubuntu-18.04 # machine to run job on
+    steps: #steps to perform in the job
       - name: echo a string
         run: echo "Hello World"
       - name: multiline script
